@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ガチャ</title>
+        <style>
+            body{
+                background-color: bisque;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="gacha_style.css">
+    </head>
+    <body>
+        <h1 style="text-align:center">ガチャをやってみよう！</h1>
+        <div class="bun" id="output"></div>
+        <p>
+            <img class="imagin" id="image_file" src="saisyo.png"/>
+        </p>
+        <div class="button">
+            <input type="button" style="width:90%;padding:10px;font-size:30px;" value="Let'sガチャ！" onClick="gacha();">
+        </div>
+        <script type="text/javascript">
+
+            function gacha() {
+                r = Math.random();
+                if(r<0.3){
+                    target = document.getElementById("output");
+                    var img = document.getElementById("image_file");
+                    img.src="atari.png";
+                }
+                else if(0.95<r){
+                    target = document.getElementById("output");
+                    alert("おめでとう！");
+                    var img = document.getElementById("image_file");
+                    img.src="ooatari.png";
+                }
+                else{
+                    target = document.getElementById("output");
+                    var img = document.getElementById("image_file");
+                    img.src="zannnenn.png";
+                }
+            }
+        </script>
+        
+    </body>
+</html>
